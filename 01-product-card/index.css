@@ -1,0 +1,158 @@
+/* Смотри сколько снизу свободного места! Оно идеально подойдёт, чтобы писать твои стили! */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-content {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+}
+
+.page-header__title {
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin: 40px 0px;
+}
+
+.product-list {
+  width: 1180px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-item {
+  background: url('./assets/Image.jpg') no-repeat top;
+  background-color: #fff;
+  width: 380px;
+  height: 482px;
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0px 0px 45px -4px rgba(0, 0, 0, 0.18);
+}
+
+.product-item__features {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  width: 263px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-item__features-item {
+  padding: 0px 16px;
+  border-radius: 8px;
+  font-size: 1em;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.product-item__features-item.new {
+  background-color: #fdcff3;
+}
+
+.product-item__features-item.last {
+  background-color: #ffcf56;
+}
+
+.product-item__description {
+  margin-top: 215px;
+}
+.product-item__title {
+  padding: 1.5rem 1.5rem 0rem 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.product-item__text {
+  font-size: 1rem;
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
+  line-height: 1.5rem;
+}
+
+.product-list__item-btn {
+  position: absolute;
+  bottom: 1.5em;
+  width: 332px;
+  height: 48px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0%);
+  border: #42940f solid 2px;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #42940f;
+  font-weight: 900;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.product-list__item-btn:hover {
+  background-color: #42940f;
+  color: #fff;
+}
+
+.product-list__item-btn:active {
+  background-color: #1f5200;
+  border-color: #1f5200;
+  color: #fff;
+}
+
+.product-list__item-btn:disabled {
+  background-color: #4e4e4e;
+  border-color: #4e4e4e;
+  color: #fff;
+  cursor: default;
+}
+
+@media (max-width: 1200px) {
+  .product-list {
+    width: 960px;
+  }
+
+  .product-item {
+    width: 310px;
+    height: 480px;
+  }
+
+  .product-list__item-btn {
+    width: 280px;
+  }
+}
